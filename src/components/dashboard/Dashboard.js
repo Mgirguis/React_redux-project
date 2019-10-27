@@ -23,7 +23,7 @@ class Dashboard extends Component {
     }
 }
 const mapState = (state) => {
-    console.log(state);
+    // console.log(state);
     return {
         // projects: state.project.projects
         projects : state.fireStore.ordered.projects
