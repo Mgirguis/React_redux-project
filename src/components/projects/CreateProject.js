@@ -7,17 +7,18 @@ class CreateProject extends Component {
     state = {
       title: '',
         content: ''
-    }
+    };
     changeHandle = (e) => {
         this.setState({
             [e.target.id]: e.target.value
         })
-    }
+    };
     submitHandle = (e) => {
         e.preventDefault();
         // console.log(this.state)
         this.props.createProject(this.state);
-    }
+        this.props.history.push('/');
+    };
     render() {
         const {auth} = this.props;
         if(!auth.uid) return <Redirect to='/signin' />
