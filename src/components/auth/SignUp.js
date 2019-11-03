@@ -19,9 +19,10 @@ class SignUp extends Component {
         e.preventDefault();
         this.props.signUp(this.state)
     }
+
     render() {
         const {auth, authError} = this.props;
-        if(auth.uid) return <Redirect to='/' />
+        if (auth.uid) return <Redirect to='/'/>
 
         return (
             <div className='container'>
@@ -54,6 +55,7 @@ class SignUp extends Component {
         );
     }
 }
+
 const mapStateToProps = (state) => {
     return {
         auth: state.firebase.auth,
@@ -66,4 +68,4 @@ const mapDispatchToProps = (dispatch) => {
         signUp: (newUser) => dispatch(signUp(newUser))
     }
 };
-export default connect(mapStateToProps,mapDispatchToProps) (SignUp);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

@@ -4,7 +4,7 @@ class Notifications extends Component {
     render() {
         return (
             <div>
-               <h4>Notification</h4>
+                <h4>Notification</h4>
             </div>
         );
     }
